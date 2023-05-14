@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+.headerStyle {
+  background-color: #007cd4;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 3rem;
+}
+.siderStyle {
+  background-color: #fff;
+  color: white;
+  padding: 2rem;
+}
+.contentStyle {
+  height: 100vh;
+  padding: 1rem;
+}
+.footerStyle {
+  background-color: #000000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@layer components {
+  .sidebarList {
+    @apply cursor-pointer hover:text-blue-600 transition-all
+    cursor-pointer hover:text-blue-600 transition-all
+    cursor-pointer hover:text-blue-600 transition-all;
+  }
+}
