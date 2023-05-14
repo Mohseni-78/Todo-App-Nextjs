@@ -11,11 +11,9 @@
 }
 .headerStyle {
   background-color: #007cd4;
+  padding: 1.5rem;
+  height: 100px;
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 3rem;
 }
 .siderStyle {
   background-color: #fff;
@@ -36,8 +34,9 @@
 
 @layer components {
   .sidebarList {
-    @apply cursor-pointer hover:text-blue-600 transition-all
-    cursor-pointer hover:text-blue-600 transition-all
-    cursor-pointer hover:text-blue-600 transition-all;
+    @apply cursor-pointer hover:text-blue-600 transition-all flex gap-2 items-center;
+  }
+  .btn {
+    @apply border-0 outline-0 bg-blue-950 px-[2rem] rounded-lg uppercase hover:bg-green-500 transition-all;
   }
 }

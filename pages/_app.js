@@ -1,23 +1,29 @@
 import "@/styles/globals.css";
+// componets
 import SiderCom from "@/components/Sider";
+import HeaderCom from "@/components/Header";
 import { Layout } from "antd";
+import { SessionProvider } from "next-auth/react";
+
 const { Header, Sider, Footer, Content } = Layout;
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps: { session, ...pageProps } }) {
   return (
-    <Layout>
-      <Header className="headerStyle">
-        <h1 className="text-3xl">LOGO</h1>
-      </Header>
+    <SessionProvider session={session}>
       <Layout>
-        <Sider className="siderStyle">
-          <SiderCom />
-        </Sider>
-        <Content className="contentStyle">
-          <Component {...pageProps} />
-        </Content>
+        <Header className="headerStyle">
+          <HeaderCom />
+        </Header>
+        <Layout>
+          <Sider className="siderStyle">
+            <SiderCom />
+          </Sider>
+          <Content className="contentStyle">
+            <Component {...pageProps} />
+          </Content>
+        </Layout>
+        <Footer className="footerStyle">copy right &copy;</Footer>
       </Layout>
-      <Footer className="footerStyle">copy right &copy;</Footer>
-    </Layout>
+    </SessionProvider>
   );
 }
