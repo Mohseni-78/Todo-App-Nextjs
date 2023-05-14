@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import { useFormik } from "formik";
 //Imported Schemas ============>
 import { signUpSchema } from "@/schemas";
+// Next Auth
 import { getSession } from "next-auth/react";
 
 const SignUp = () => {

@@ -11,4 +11,16 @@ const verifyPassword = async (password, hashPass) => {
   return !(await compare(password, hashPass)) ? false : true;
 };
 
-export { hashPassword, verifyPassword };
+const sortTodos = (todos) => {
+  const sorted = {};
+
+  todos.map((item) => {
+    if (!sorted[item.status]) {
+      sorted[item.status] = [];
+    }
+    sorted[item.status].push(item);
+  });
+  return sorted;
+};
+
+export { hashPassword, verifyPassword, sortTodos };

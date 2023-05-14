@@ -1,9 +1,10 @@
+import { SessionProvider } from "next-auth/react";
+// Styles
 import "@/styles/globals.css";
 // componets
 import SiderCom from "@/components/Sider";
 import HeaderCom from "@/components/Header";
 import { Layout } from "antd";
-import { SessionProvider } from "next-auth/react";
 
 const { Header, Sider, Footer, Content } = Layout;
 

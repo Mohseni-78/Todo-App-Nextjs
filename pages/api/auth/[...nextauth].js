@@ -1,9 +1,13 @@
+// Models
 import User from "@/models/User";
+// Utils
 import ConnectDb from "@/utils/ConnectDb";
 import { verifyPassword } from "@/utils/functions";
+// Next Auth
 import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
-const authOption = {
+
+export const authOption = {
   session: { strategy: "jwt" },
   providers: [
     CredentialsProvider({
@@ -32,5 +36,6 @@ const authOption = {
       },
     }),
   ],
+  secret: process.env.NEXT_PUBLIC_SECRET_KEY,
 };
 export default NextAuth(authOption);

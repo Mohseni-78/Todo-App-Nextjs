@@ -31,7 +31,6 @@ export default async function handler(req, res) {
     const user = await User.create({
       email,
       password: await hashPassword(password),
-      todos: [{ title: "todo1", status: "done" }],
     });
     return res.status(201).json({ status: "Success", message: "User Create Succefully", user });
   } catch (err) {

@@ -19,9 +19,10 @@
   background-color: #fff;
   color: white;
   padding: 2rem;
+  height: 100vh;
 }
 .contentStyle {
-  height: 100vh;
+  height: 100%;
   padding: 1rem;
 }
 .footerStyle {
@@ -30,6 +31,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.bg-todo {
+  background-color: orangered;
+}
+.bg-inProgress {
+  background-color: green;
+}
+.bg-review {
+  background-color: blue;
+}
+.bg-done {
+  background-color: skyblue;
 }
 
 @layer components {

@@ -1,3 +1,4 @@
+import Link from "next/link";
 // ICONS
 import { AlignCenterOutlined } from "@ant-design/icons";
 
@@ -8,11 +9,11 @@ const SiderCom = () => {
       <ul className="list-none grid gap-2 ">
         <li className="sidebarList">
           <AlignCenterOutlined />
-          Todos
+          <Link href={"/"}>Todos</Link>
         </li>
         <li className="sidebarList">
           <AlignCenterOutlined />
-          Add Todo
+          <Link href={"/addTodo"}>Add Todo</Link>
         </li>
         <li className="sidebarList">
           <AlignCenterOutlined />

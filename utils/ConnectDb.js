@@ -2,10 +2,9 @@ import { connect, connections } from "mongoose";
 
 const ConnectDb = async () => {
   try {
-    if (!connections[0].readyState) {
-      await connect(process.env.NEXT_PUBLIC_MONGO_KEY);
-      console.log("Connect to db");
-    }
+    if (connections[0].readyState) return;
+    await connect(process.env.NEXT_PUBLIC_MONGO_KEY);
+    console.log("Connect to db");
   } catch (err) {
     console.log("failed to connect db");
   }

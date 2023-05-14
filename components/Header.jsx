@@ -1,6 +1,6 @@
-import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
-import React from "react";
+// Next Auth
+import { signOut, useSession } from "next-auth/react";
 
 const HeaderCom = () => {
   const { status } = useSession();
