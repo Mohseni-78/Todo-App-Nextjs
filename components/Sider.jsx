@@ -17,7 +17,7 @@ const SiderCom = () => {
         </li>
         <li className="sidebarList">
           <AlignCenterOutlined />
-          Profle
+          <Link href={"/profile"}>Profle</Link>
         </li>
       </ul>
     </>
